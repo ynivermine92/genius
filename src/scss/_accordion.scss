@@ -1,0 +1,415 @@
+///////////////Accordion///////////////
+.acardion {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+.acardion__item {
+	cursor: pointer;
+	max-width: 1322px;
+	width: 100%;
+	margin-top: 40px;
+
+	border-left: none;
+	border-right: none;
+}
+
+.acardion__wrapper-box {
+	display: flex;
+	gap: 10px 116px;
+}
+
+.acardion__arrow-svg {
+	height: 20px;
+	width: 20px;
+}
+
+
+
+.acardion__result-title {
+	color: rgba(139, 87, 194, 1);
+	@extend %g-700;
+	font-size: 16px;
+	margin-bottom: 16px;
+}
+
+.acardion__result-icon {
+	border-radius: 2px;
+	background: rgba(139, 87, 194, 1);
+	width: 10px;
+	height: 10px;
+}
+
+.acardion__result-item+.acardion__result-item {
+	margin-top: 24px;
+}
+
+.acardion__result-text {
+	line-height: 1.18em;
+	font-size: 16px;
+	color: rgba(0, 0, 0, 1);
+	max-width: 583px;
+}
+
+.acardion__result-box {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+}
+
+
+.acardion__info {
+	color: rgba(0, 0, 0, 1);
+	@extend %g-700;
+	font-size: clamp(22px, 2vw, 32px);
+	line-height: 2.375em;
+	margin-bottom: 44px;
+	line-height: 38px;
+}
+
+
+.acardion__detals {
+	display: flex;
+	gap: 12px;
+}
+
+.acardion__detals-item {
+	display: flex;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 40px;
+}
+
+.acardion__icon-name {
+	color: rgba(0, 0, 0, 1);
+	font-size: 16px;
+
+	span+span {
+		margin-left: 12px;
+	}
+}
+
+.acardion__box {
+
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 6px 24px 6px 16px;
+}
+
+.acardion-svg {
+	height: 32px;
+	fill: #8B57C2;
+	width: 32px;
+}
+
+.acardion__arrow-svg {
+	fill: black;
+	stroke: black;
+}
+
+.acardion__title {
+
+	position: relative;
+	display: block;
+	padding: 40px 22px;
+	margin-bottom: 2px;
+	color: #202020;
+	font-size: 28px;
+	text-decoration: none;
+	border-radius: 3px;
+	transition: background-color 0.2s;
+	border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+	display: flex;
+	justify-content: space-between;
+
+}
+
+
+.acardion__title-box {
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.acardion__circle {
+	background: rgba(139, 87, 194, 1);
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $col;
+}
+
+.acardion__lessons {
+	border-radius: 20px;
+	background: rgba(231, 208, 255, 1);
+	padding: 29px;
+	max-width: 478px;
+	width: 100%;
+	align-self: flex-start;
+}
+
+.acardion__content-detals {
+	max-width: 605px;
+}
+
+.acardion__lessons-title {
+	padding-bottom: 18px;
+	font-size: 22px;
+	@extend %g-700;
+	color: rgba(0, 0, 0, 1);
+}
+
+.acardion__lessons-item+.acardion__lessons-item {
+	margin-top: 14px;
+	font-size: 16px;
+	@extend %g-700;
+	line-height: 1.18em;
+
+}
+
+
+.acardion__lessons-link {
+	position: relative;
+	transition: all 0.5s;
+	display: flex;
+	gap: 6px;
+
+	&:hover {
+		margin-left: 10px;
+		transition: all 0.5s;
+		color: rgba(139, 87, 194, 1);
+
+		span:first-child {
+			margin-left: 6px;
+		}
+
+		&::after {
+			content: '>';
+			position: absolute;
+			left: -10px;
+			top: 0;
+			color: rgba(139, 87, 194, 1);
+			width: 6px;
+			height: 10px;
+		}
+	}
+}
+
+.acardion__content-wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 40px 0 60px 0;
+	gap: 20px;
+}
+
+
+
+
+
+.acardion__content {
+	margin-bottom: 2px;
+	font-size: 14px;
+	display: none;
+}
+
+.symbol {
+	font-weight: 700;
+	position: absolute;
+	top: 13px;
+	right: 10px;
+	display: inline-block;
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	color: #000;
+	line-height: 30px;
+	font-size: 20px;
+	font-weight: 700;
+	margin-right: 5px;
+	border-radius: 50%;
+	transition: all 0.2s ease-out;
+	transform: rotate(360deg);
+}
+
+.symbol__rotate {
+	transform: rotate(90deg);
+}
+
+.acardion__text {
+	font-size: 16px;
+	color: rgba(0, 0, 0, 1);
+	@extend %g-700;
+	line-height: 1.18em;
+	margin-bottom: 40px;
+}
+
+
+.acardion__detals-title {
+	font-size: 16px;
+	@extend %g-700;
+	color: rgba(139, 87, 194, 1);
+	margin-bottom: 16px;
+}
+
+.acardion__result-btn {
+	margin-top: 48px;
+}
+
+
+.acardion__title {
+	transition: all 0.5;
+
+	&.active,
+	&:hover {
+		border-radius: 20px;
+		background: rgba(139, 87, 194, 1);
+
+		.acardion__circle {
+			transition: all 0.5s;
+			background: rgba(255, 255, 255, 0.3);
+		}
+
+		.acardion__info {
+			color: $col;
+		}
+
+		.acardion__icon-name {
+			span {
+				color: $col;
+			}
+		}
+
+		.acardion-svg {
+			fill: $col;
+			stroke: $col;
+		}
+
+		.acardion__arrow-svg {
+			fill: $col;
+			stroke: $col;
+			transform: rotate(180deg);
+		}
+
+		.acardion__detals-item {
+			border: 1px solid $col;
+
+		}
+	}
+
+}
+
+@media (max-width:1100px) {
+	.acardion {
+		&__content-detals {
+			max-width: 450px;
+		}
+	}
+}
+
+@media (max-width:850px) {
+	.acardion {
+		&__content-wrapper {
+			flex-direction: column;
+			padding: 0 29px;
+		}
+
+		&__lessons {
+			max-width: 100%;
+			background: transparent;
+			padding: 30px 0;
+		}
+
+		&__content-detals {
+			max-width: 100%;
+		}
+
+		&__wrapper-box {
+			gap: 10px 30px;
+		}
+
+		&__circle {
+			width: 80px;
+			height: 80px;
+		}
+
+		&__title {
+			font-size: 18px;
+		}
+
+		&__icon-name {
+			font-size: 14px;
+		}
+
+		&__box {
+			gap: 5px;
+
+		}
+
+		.acardion__icon-name span+span {
+			margin-left: 5px;
+		}
+
+		&__info {
+			line-height: 1.3em;
+		}
+
+		&__item .container {
+			padding: 0;
+		}
+	}
+
+
+}
+
+
+@media (max-width:650px) {
+	.acardion {
+		&__wrapper-box {
+			position: absolute;
+			top: 50%;
+			right: 18px;
+		}
+
+		&__title.active,
+		&__title:hover {
+			border-radius: 0px;
+			background: #8b57c2;
+		}
+
+		&__detals {
+			flex-direction: column;
+		}
+
+		&__detals-item {
+			max-width: 157px;
+
+		}
+
+		&__title {
+			padding: 20px 16px;
+		}
+
+		&__box {
+			padding: 6px 8px 6px 8px;
+		}
+
+		&__wrapper-box {
+			gap: 10px 18px;
+		}
+
+		&__result-text {
+			max-width: 90%;
+		}
+	}
+
+
+}
+
+///////////////Accordion///////////////

@@ -1,0 +1,172 @@
+// Container
+.container {
+    max-width: ($containerWidth + $containerPadding) + px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerSidePadding + px;
+
+
+
+    @media (max-width: $breakpoint992) {
+        max-width: 970px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 740px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        max-width: none;
+    }
+}
+
+// Body & Locked
+html {
+    overflow-x: hidden;
+}
+
+body {
+    @extend %g-500;
+
+    &.locked {
+        overflow: hidden;
+    }
+
+    // Dark mode styles
+    &.dark {
+        background: #242424;
+    }
+}
+
+// Animations
+// Fade
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+.registration {
+    position: relative;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    padding: 18px 60px;
+    border-radius: 10px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(120deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.6) 50%,
+                rgba(255, 255, 255, 0) 100%);
+        transform: skewX(-20deg);
+        transition: left 0.8s ease;
+    }
+
+    &:hover::after {
+        left: 150%;
+    }
+
+    &:hover {
+        background: rgba(139, 87, 194, 1);
+        color: #fff;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+        transform: translateY(-2px);
+        border: 1px solid transparent;
+    }
+}
+
+
+
+
+
+
+.hero__registration,
+.btn {
+    position: relative;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid transparent;
+
+    background: rgba(139, 87, 194, 1);
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    padding: 18px 60px;
+    border-radius: 10px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(120deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.6) 50%,
+                rgba(255, 255, 255, 0) 100%);
+        transform: skewX(-20deg);
+        transition: left 0.8s ease;
+    }
+
+    &:hover::after {
+        left: 150%;
+    }
+
+    &:hover {
+        background: transparent;
+        color: #fff;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+        transform: translateY(-2px);
+        border: 1px solid rgba(255, 255, 255, 1);
+    }
+}
+
+
+.btn {
+    font-size: clamp(14px, 2vw, 18px);
+
+    &:hover {
+        border: 1px solid transparent;
+        background: rgba(139, 87, 194, 1);
+    }
+}
+
+h3 {
+    font-size: clamp(30px, 8vw, 50px);
+}
+
+
+
+
+@keyframes pulseAll {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}

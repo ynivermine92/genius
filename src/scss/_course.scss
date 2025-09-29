@@ -1,0 +1,221 @@
+.course {
+    padding: 40px 0 20px 0;
+    background: #121212;
+    position: relative; 
+    overflow: hidden;
+
+    &__circle {
+        animation: pulseAll 6s ease-in-out infinite;
+        position: absolute;
+        left: -30%;
+        top: -50%;
+    }
+
+
+    h3 {
+        @extend %g-800;
+        line-height: 1.2em;
+        text-align: center;
+
+        span {
+            color: $col;
+        }
+
+        span+span {
+            color: rgba(139, 87, 194, 1);
+        }
+    }
+
+    &__inner {
+        padding-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    &__wrapper {
+        margin: 0 auto;
+        @extend %g-700;
+        font-size: 30px;
+        flex: 1 1 394px;
+
+        ul {
+            padding: 24px 24px 0px 24px;
+        }
+    }
+
+    &__title {
+        border-radius: 20px 20px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+    }
+
+
+    .standart {
+        .course__items {
+            border: 1px solid rgba(255, 126, 242, 1);
+            border-top: none;
+
+        }
+    }
+
+    &__items li:last-child {
+        padding-bottom: 40px;
+        border-bottom: 1px solid#595959;
+    }
+
+    &__standart {
+        background: rgba(255, 126, 242, 1);
+        color: $col;
+
+    }
+
+    .pro {
+        .course__items {
+            border: 1px solid rgba(254, 203, 0, 1);
+            border-top: none;
+            border-bottom: none;
+        }
+
+        .course__benefit {
+            border-bottom: 1px solid rgba(254, 203, 0, 1);
+        }
+
+    }
+
+    &__pro {
+        color: black;
+        background: rgba(254, 203, 0, 1);
+        border: 1px solid rgba(254, 203, 0, 1);
+    }
+
+
+    .premium {
+        .course__items {
+            border: 1px solid rgba(139, 87, 194, 1);
+            border-top: none;
+            border-bottom: none;
+        }
+
+        .course__benefit {
+            border-bottom: 1px solid rgba(139, 87, 194, 1);
+        }
+    }
+
+    &__premium {
+        color: $col;
+        background: rgba(139, 87, 194, 1);
+        border: 1px solid rgba(139, 87, 194, 1);
+    }
+
+    h5 {
+        color: $col;
+        font-size: 20px;
+        line-height: 1.2em;
+        @extend %g-700;
+    }
+
+    &__item+&__item {
+        margin-top: 20px;
+        margin-left: 8px;
+    }
+
+    &__box {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__text {
+        color: rgba(255, 255, 255, 1);
+        font-size: 16px;
+        line-height: 1.18em;
+        position: relative;
+        opacity: 0.7;
+        left: 10px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 4px;
+            width: 4px;
+            background: rgba(255, 255, 255, 1);
+            border-radius: 50%;
+            opacity: 0.7;
+            top: 8px;
+            left: -10px;
+        }
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+    }
+
+    &__benefit {
+        padding-bottom: 40px;
+    }
+
+    &__benefit li:last-child {
+        margin-top: 0;
+        border-bottom: none;
+    }
+
+    &__item {
+        padding-left: 10px;
+    }
+
+    &__items-pro .course__text::before {
+        width: 10px;
+        background: rgba(254, 203, 0, 1);
+        border-radius: 2px;
+        height: 10px;
+        top: 5px;
+        left: -16px;
+    }
+
+    &__items-premium .course__text::before {
+        width: 10px;
+        background: #8B57C2;
+        border-radius: 2px;
+        height: 10px;
+        top: 5px;
+        left: -16px;
+    }
+
+    &__info {
+        padding-left: 34px;
+        margin: 24px 0;
+        font-size: 16px;
+        color: $col;
+        line-height: 1.5em;
+        max-width: 345px;
+    }
+
+    @media(max-width:1100px) {
+
+        &__inner {
+            flex-wrap: wrap;
+        }
+
+        &__circle {
+            left: -50%;
+            top: 0%;
+        }
+    }
+
+    @media(max-width:800px) {
+        &__circle {
+            left: -120%;
+
+        }
+    }
+
+    @media(max-width:500px) {
+        &__circle {
+            left: -200%;
+        }
+    }
+
+}

@@ -1,0 +1,116 @@
+.footer {
+    background: #232326;
+    padding: 44px 100px 0 100px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px 0;
+    }
+
+    &__info-text {
+        color: $col;
+        font-size: 12px;
+        @extend %g-400;
+        margin-top: 10px;
+        margin: 20px 0;
+        max-width: 206px;
+        line-height: 1.5em;
+    }
+
+    &__socials {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__socialsvg {
+        width: 24px;
+        height: 24px;
+        fill: #ffff;
+        transition: all 0.5s;
+
+        &:hover {
+            fill: #8B57C2;
+            transition: all 0.5s;
+        }
+    }
+
+    &__items-nav {
+        margin-top: 20px;
+    }
+
+    &__item-title {
+        font-size: clamp(15px, 1.2vw, 18px);
+        margin-bottom: 20px;
+        color: $col;
+        @extend %g-700;
+    }
+
+    &__item-nav+&__item-nav {
+        margin-top: 10px;
+    }
+
+    &__link-nav {
+        font-size: 13px;
+        @extend %g-400;
+        color: $col;
+        transition: 0.5s all;
+
+        &:hover {
+            transition: 0.5s all;
+            color: #8B57C2;
+            ;
+        }
+    }
+
+
+    &__items-contact {
+        margin-top: 20px;
+    }
+
+    &__item-contact+&__item-contact {
+        margin-top: 10px;
+    }
+
+    &__items-text {
+        max-width: 280px;
+        font-size: 13px;
+        @extend %g-400;
+        color: $col;
+        transition: 0.5s all;
+    }
+
+    &__link-contact {
+        font-size: 13px;
+        @extend %g-400;
+        color: $col;
+        transition: 0.5s all;
+
+        &:hover {
+            transition: 0.5s all;
+            color: #8B57C2;
+        }
+    }
+
+    &__inner {
+        margin-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 30px 0;
+        display: flex;
+        gap: 20px 40px;
+        flex-wrap: wrap;
+
+    }
+
+    &__bottom-link {
+        font-size: 12px;
+        @extend %g-400;
+        color: $col;
+    }
+    @media(max-width:1000px){
+        &{
+            padding: 50px 20px;
+        }
+    }
+}
